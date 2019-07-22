@@ -1,0 +1,13 @@
+<div class="menuContainer">
+  <button class="easy" (click)='makeField(10,8,8)'>EASY</button>
+  <button class="medium" (click)='makeField(40,16,16)'>MEDIUM</button>
+  <button class="hard" (click)='makeField(99,24,24)'>HARD</button>
+  <button class="hard" *ngIf='FieldsLeft != 0'>{{this.FieldsLeft}}</button>
+</div>
+<div class="endContainer" *ngIf='end.isEnd === true'>
+  <div class="nextContainer">
+    <p>YOU</p>
+    <p *ngIf='end.result === false'>LOST</p>
+    <p *ngIf='end.result === true'>WON</p>
+    <button (click) = reset()>One more?</button></div>
+</div>

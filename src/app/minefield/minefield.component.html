@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row" *ngFor="let row of minefield" >
+    <div class="field" *ngFor="let field of row" (contextmenu)="rightClick(field.row, field.id); false" (click)="uncover(field.row, field.id)" [ngStyle]="field.revealed &&{'background-color': 'white'}">
+      <p *ngIf="field.revealed && !field.isMine && field.nearMines !== 0">{{field.nearMines}}</p>
+      <p *ngIf="field.revealed && field.isMine" [ngStyle]="field.revealed && {'color': 'red', 'font-weight': 'bold'}">B</p>
+      <img *ngIf="field.flag" src="../../assets/flag_2.png" alt="" srcset="">
+    </div>
+  </div>
+</div>
+<div class="endMenu">
+  <p *ngIf="end.isEnd && end.result">YOU WON</p>
+  <p *ngIf="end.isEnd && !end.result">YOU LOST</p>
+</div>

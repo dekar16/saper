@@ -1,0 +1,22 @@
+.container{
+    text-align: center;
+    min-width: 700px; 
+}
+
+.field{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    background-color: gray;
+    text-align: center;
+    vertical-align: top;
+    box-decoration-break: clone;
+    box-shadow: inset -1px 0 rgb(50, 50, 50), inset 0 -1px rgb(50, 50, 50), inset 1px 0 rgb(200,200,200), inset 0 1px rgb(200,200,200);
+    user-select: none;
+}
+
+
+.field>p{
+    text-align: center;
+    line-height: 0px;
+}
